@@ -1,0 +1,23 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/info_option"
+        android:title="Informazioni"/>
+    <item
+        android:id="@+id/scelta_testo_logo"
+        android:title="Mostra titolo" />
+    <item
+        android:id="@+id/quit_option"
+        android:title="Esci"/>
+    <item
+        android:id="@+id/site_icon"
+        android:icon="@drawable/ic_website"
+        android:title="SITO"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/forum_icon"
+        android:title="FORUM"
+        android:icon="@android:drawable/stat_notify_chat"
+        app:showAsAction="always" />
+
+</menu>
