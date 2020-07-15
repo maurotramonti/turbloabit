@@ -13,8 +13,8 @@ Questo repository contiene il codice sorgente dell'app di [turbolab.it](https://
 
 ## Download
 
-Livello API minimo: 24 (Android 7.0)
-Livelli API target: 29 (Android 10)
+* Livello API minimo: 24 (Android 7.0)
+* Livello API target: 29 (Android 10)
 
 [http://www.mediafire.com/file/mgrum2iol2ze6r3/com.maurotramonti.turbolabit-1.0.apk/file](http://www.mediafire.com/file/mgrum2iol2ze6r3/com.maurotramonti.turbolabit-1.0.apk/file)
 
