@@ -3,6 +3,6 @@
     <string name="logo_content_text">LOGO DELL\'APP</string>
     <string name="url_senza_https">turbolab.it</string>
     <string name="autori">Autori: Mauro Tramonti</string>
-    <string name="versione">versione 1.0</string>
+    <string name="versione">versione 1.1</string>
     <string name="preference_file_key">shared_preferences_file</string>
 </resources>

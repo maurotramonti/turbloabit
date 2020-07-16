@@ -1,9 +1,7 @@
 package com.maurotramonti.turbolabit;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,40 +13,38 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
     private WebView wv1;
-    private boolean actionbar_title;
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.preference_file_key), 0);
+
+        if (sharedPref.getInt("theme", 0) == 1) {
+            this.setTheme(R.style.DarkTheme);
+        }
+
+        else if (sharedPref.getInt("theme", 0) == 0){
+            this.setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.preference_file_key), 0);
-        int actionbar_config = sharedPref.getInt("actionbar_showed", 1);
-        if (actionbar_config == 0) {
+
+
+        if (sharedPref.getInt("actionbar_showed", 1) == 0) {
             getSupportActionBar().setDisplayUseLogoEnabled(false);
             getSupportActionBar().setDisplayShowHomeEnabled(false);
             getSupportActionBar().setTitle(R.string.app_name);
-            actionbar_title = true;
         }
 
-        else if (actionbar_config == 1) {
+        else if (sharedPref.getInt("actionbar_showed", 1) == 1) {
             getSupportActionBar().setDisplayUseLogoEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setIcon(R.drawable.logo_actionbar);
             getSupportActionBar().setTitle("");
-            actionbar_title = false;
         }
 
 
-        WebView internet_browser = (WebView) findViewById(R.id.internet_browser);
         wv1=(WebView)findViewById(R.id.internet_browser);
         wv1.setWebViewClient(new TLIBrowser());
         wv1.getSettings().setLoadsImagesAutomatically(true);
@@ -71,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     @Override
@@ -84,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item)
     {
         int id=item.getItemId();
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.preference_file_key), 0);
+        SharedPreferences.Editor editor = sharedPref.edit();
         switch(id)
         {
             case R.id.site_icon:
@@ -94,35 +93,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.info_option:
                 Intent i = new Intent(this, InfoActivity.class);
+                i.putExtra("theme", sharedPref.getInt("theme", 0));
                 startActivity(i);
                 break;
-            case R.id.scelta_testo_logo:
-                if (actionbar_title) {
-                    getSupportActionBar().setDisplayUseLogoEnabled(true);
-                    getSupportActionBar().setDisplayShowHomeEnabled(true);
-                    getSupportActionBar().setIcon(R.drawable.logo_actionbar);
-                    getSupportActionBar().setTitle("");
-                    actionbar_title = false;
-                    item.setTitle("Mostra titolo");
-                    SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.preference_file_key), 0);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putInt("actionbar_showed", 1);
-                    editor.commit();
-                }
+            case R.id.impostazioni_menu:
 
-                else {
-                    getSupportActionBar().setTitle("Turbolab.it");
-                    getSupportActionBar().setDisplayUseLogoEnabled(false);
-                    getSupportActionBar().setDisplayShowHomeEnabled(false);
-                    actionbar_title = true;
-                    item.setTitle("Mostra icona");
-                    SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.preference_file_key), 0);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putInt("actionbar_showed", 0);
-                    editor.commit();
-                }
-
+                Intent i2 = new Intent(this, SettingsActivity.class);
+                i2.putExtra("theme", sharedPref.getInt("theme", 0));
+                startActivity(i2);
                 break;
+
             case R.id.quit_option:
                 this.finish();
                 break;
