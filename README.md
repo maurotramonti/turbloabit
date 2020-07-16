@@ -37,6 +37,7 @@ Cambiamenti con la versione 1.1
 
 ## Bug risolti
 
+* **TLIAPP-3**: attivando il tema scuro i pulsanti di "Ricarica" e "Indietro" saranno verde acqua e non rossi
 * **TLIAPP-2**: la preferenza icona/indirizzo non viene salvata
 * **TLIAPP-1**: Se si cerca di tornare indietro dall'Activity "Informazioni su" l'app si chiuderà.
 
