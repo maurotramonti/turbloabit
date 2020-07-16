@@ -33,11 +33,10 @@ Cambiamenti con la versione 1.1
 
 ## Bug conosciuti
 
-* Niente da segnalare al momento.
+* **TLIAPP-3**: attivando il tema scuro i pulsanti di "Ricarica" e "Indietro" saranno verde acqua e non rossi
 
 ## Bug risolti
 
-* **TLIAPP-3**: attivando il tema scuro i pulsanti di "Ricarica" e "Indietro" saranno verde acqua e non rossi
 * **TLIAPP-2**: la preferenza icona/indirizzo non viene salvata
 * **TLIAPP-1**: Se si cerca di tornare indietro dall'Activity "Informazioni su" l'app si chiuderà.
 
@@ -45,6 +44,11 @@ Cambiamenti con la versione 1.1
 
 * Miglioramenti grafici (ad es. l'icona che diventa rossa con il tema scuro attivato)
 * Eventuali suggerimenti (puoi inserirli [qui](https://turbolab.it/forum/viewtopic.php?f=26&t=9699))
+
+## Schermi grandi
+
+Su tablet ci sono degli errori con il tema scuro (si colora di nero solo la barra di stato), inoltre alcuni elementi del layout delle impostazioni sono sfalsati. Potrebbe essere causato dal fatto che l'app non è ottimizzata per schermi grandi, per questo per i tablet da 8+ pollici consiglio di usare ancora il sito in versione mobile per il momento.
+Farò delle prove per rendere uniforme il layout con schermi di tutte le dimensioni.
 
 ## Altre informazioni
 
