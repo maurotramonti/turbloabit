@@ -43,6 +43,7 @@ Cambiamenti con la versione 1.1.2
 
 ## Da aggiungere
 
+* Funzione per scaricare l'apk aggiornato direttamente dall'app
 * Eventuali suggerimenti (puoi inserirli [qui](https://turbolab.it/forum/viewtopic.php?f=26&t=9699))
 
 ## Altre informazioni
