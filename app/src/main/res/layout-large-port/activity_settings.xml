@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <Switch
+        android:id="@+id/dark_theme_switch"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Tema scuro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="170dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+        android:checkedButton="@id/radioButtonIcon"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonIcon"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Icona" />
+
+        <RadioButton
+            android:id="@+id/radioButtonText"
+            android:layout_width="83dp"
+            android:layout_height="36dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Testo" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textTitleBarRadio"
+        android:layout_width="121dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:text=" Barra del titolo:"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textIsSelectable="false"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup1"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         else if (sharedPref.getInt("actionbar_showed", 1) == 1) {
             getSupportActionBar().setDisplayUseLogoEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-            getSupportActionBar().setIcon(R.drawable.logo_actionbar);
+            if (sharedPref.getInt("theme", 0) == 0) getSupportActionBar().setIcon(R.drawable.logo_actionbar);
+            else if (sharedPref.getInt("theme", 0) == 1) getSupportActionBar().setIcon(R.drawable.logo_actionbar_red);
             getSupportActionBar().setTitle("");
         }
 
@@ -97,16 +98,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             case R.id.impostazioni_menu:
-
                 Intent i2 = new Intent(this, SettingsActivity.class);
                 i2.putExtra("theme", sharedPref.getInt("theme", 0));
                 startActivity(i2);
                 break;
-
             case R.id.quit_option:
                 this.finish();
                 break;
-
         }
         return false;
     }
