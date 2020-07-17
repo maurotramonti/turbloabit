@@ -17,7 +17,7 @@ Questo repository contiene il codice sorgente dell'app di [turbolab.it](https://
 * Livello API minimo: 24 (Android 7.0)
 * Livello API target: 29 (Android 10)
 
-[https://www.mediafire.com/file/88jzi7oz15in3ve/com.maurotramonti.turbolabit-1.1.1.apk/file](https://www.mediafire.com/file/88jzi7oz15in3ve/com.maurotramonti.turbolabit-1.1.1.apk/file)
+[https://www.mediafire.com/file/geqtqt7pijkdl6a/com.maurotramonti.turbolabit-1.1.2.apk/file](https://www.mediafire.com/file/geqtqt7pijkdl6a/com.maurotramonti.turbolabit-1.1.2.apk/file)
 
 ## Compilare da sorgenti
 
@@ -25,10 +25,10 @@ Il sorgente caricato è un progetto Android Studio, per cui è necessario instal
 
 ## Changelog
 
-Cambiamenti con la versione 1.1.1
+Cambiamenti con la versione 1.1.2
 
-* Corretti tutti i bug introdotti dalla precedente versione
-* Layout differenziato tra telefoni e tablet
+* Miglioramenti grafici
+* Miglioramento del codice
 
 
 ## Bug conosciuti
@@ -43,9 +43,7 @@ Cambiamenti con la versione 1.1.1
 
 ## Da aggiungere
 
-* Miglioramenti grafici (ad es. l'icona che diventa rossa con il tema scuro attivato)
 * Eventuali suggerimenti (puoi inserirli [qui](https://turbolab.it/forum/viewtopic.php?f=26&t=9699))
-
 
 ## Altre informazioni
 
